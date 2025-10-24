@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-family: 'TrenchThin', sans-serif;
+}
+
+@font-face {
+  font-family: 'TrenchThin';           /* имя шрифта для CSS */
+  src: url('fonts/Monoton-Regular.ttf') format('truetype'); /* путь к файлу */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/*лавный контейнер со всем контентом */
+.main-frame {
+  border: 3px solid #ff00ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  padding: 20px;
+  animation: neonBlink 2s infinite;
+}
+
+/* Мигание рамки */
+@keyframes neonBlink {
+  0%, 100% {
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+    border-color: #ff00ff;
+  }
+  50% {
+    box-shadow: 0 0 5px #660066, 0 0 10px #660066;
+    border-color: #660066;
+  }
+}
+
+.soundbutton {
+  position: fixed;
+  top: 20px;
+  left: 60px;
+  padding: 10px 20px;
+  background: #ff00ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  box-shadow: 0 0 10px #ff00ff;
+  cursor: pointer;
+}
+
+/* Оформление внутренних блоков */
+.container {
+  margin: 0;
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Текст поверх картинки */
+.comic-text {
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 3s ease;
+  margin-left: 40px;
+  margin-top: 70px;
+}
+
+
+/* Когда появляется текст*/
+.comic-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.comic-text-dj {
+  position: relative;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  backdrop-filter: blur(4px);
+  margin-top: 20px;
+  width: 330px;
+}
+
+.comic-text-dj-away{
+position: relative;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  backdrop-filter: blur(4px);
+  margin-top: 20px;
+  width: 330px;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* диско-шар */
+.disco-ball {
+  position: absolute;
+  margin-top: 405px;
+  margin-left: 380px;
+  width: 50px;
+  height: 80px;
+  animation: discoBlink 0.8s infinite;
+  background: none;
+}
+
+/* эффект мигания */
+@keyframes discoBlink {
+  0%, 100% {
+    opacity: 0.8;
+    filter: brightness(1) drop-shadow(0 0 10px #ff009d);
+  }
+  50% {
+    opacity: 0.5;
+    filter: brightness(2) drop-shadow(0 0 25px #00ffff);
+  }
+}
