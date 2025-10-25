@@ -82,11 +82,79 @@ body {
   margin-top: 70px;
 }
 
-
 /* Когда появляется текст*/
 .comic-text.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.comic-text-start{
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  margin-bottom: 100px;              
+  margin-left: 180px;
+  transform: translateY(-70px); /* откуда всплывает текст (ось и координата)*/
+  transition: all 3s ease;
+}
+
+.comic-text-start.active {
+  opacity: 1;
+  transform: translateY(-110px); /* где заканчивает всплывать текст (ось и координата)*/
+}
+
+.comic-text-dance{
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateX(55px);
+  transition: all 3s ease;
+  margin-left: 400px;
+  margin-top: 70px;
+}
+
+.comic-text-dance.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.comic-text-noman{
+ position: absolute;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  margin-bottom: 10px;              
+  margin-left: 200px;
+  transform: translateY(800px); /* откуда всплывает текст (ось и координата)*/
+  transition: all 3s ease;
+}
+
+.comic-text-noman.active {
+  opacity: 1;
+  transform: translateY(770px); /* где заканчивает всплывать текст (ось и координата)*/
 }
 
 .comic-text-dj {
@@ -120,6 +188,30 @@ position: relative;
   top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-bottom: 105px; 
+}
+
+.moon {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 440px;
+  width: 200px;
+  height: 200px;
+  background: none;
+  animation: moonGlow 5s ease-in-out infinite;
+  
+}
+
+/* мягкое "дыхание" света */
+@keyframes moonGlow {
+  0%, 100% {
+    opacity: 0.6; /* прозрачность */
+    filter: brightness(1) drop-shadow(0 0 25px #f2d6c9); /*brightness яркость */
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1) drop-shadow(0 0 45px #ffe9d6);
+  }
 }
 
 /* диско-шар */
@@ -143,4 +235,94 @@ position: relative;
     opacity: 0.5;
     filter: brightness(2) drop-shadow(0 0 25px #00ffff);
   }
+}
+
+.background {
+  transition: filter 0.2s linear; /* плавное изменение цвета */
+  filter: hue-rotate(0deg) saturate(100%) brightness(1); /* начальный цвет */
+}
+
+/* Общие стили для света */
+.light {
+  position: absolute;
+  margin-top: -5px;
+  mix-blend-mode: screen; /* делает свет "сияющим" */
+  opacity: 0.7;
+  animation: moveX 6s ease-in-out infinite alternate,
+             flicker 1.5s infinite;
+  background: none;
+}
+
+/* Каждый слой можно сделать чуть сдвинутым по времени */
+.light1 {
+  margin-left:-16px;
+  animation-delay: 0s, 0s;
+}
+
+.light2 {
+  height: 715px;
+  animation-delay: 1s, 0.3s;
+  opacity: 0.6;
+}
+
+.light3 {
+  height: 715px;
+  margin-left: 390px;
+  animation-delay: 2s, 0.6s;
+  opacity: 0.5;
+}
+
+/* Медленное движение по оси X */
+@keyframes moveX {
+  from { transform: translateX(0); }
+  to { transform: translateX(15px); }
+}
+
+/* Мерцание неона */
+@keyframes flicker {
+  0%, 100% { opacity: 0.8; filter: brightness(1.2) drop-shadow(0 0 15px #ff00ff); }
+  50% { opacity: 0.4; filter: brightness(0.8) drop-shadow(0 0 5px #00ffff); }
+}
+
+
+.image-wrapper{
+  position: relative;
+}
+/* Позиции кнопок */
+.btn-prev {
+  position: absolute;
+  bottom: 170px;
+  left: 325px;
+  width: 54px;
+  height: 33px;
+  background: none;
+}
+
+.btn-next {
+  position: absolute;
+  bottom: 110px;
+  left: 325px;
+  width: 54px;
+  height: 33px;
+  background: none;
+}
+
+.btn-circle{
+  position: absolute;
+  bottom: 125px;
+  right: 85px;
+  width: 180px;
+  height: 150px;
+  background: none;
+ transition: transform 0.2s linear;
+}
+
+/* При наведении запускаем бесконечное вращение */
+.btn-circle:hover {
+  animation: rotateClockwise 2s linear infinite;
+}
+
+@keyframes rotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
