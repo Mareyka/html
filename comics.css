@@ -173,7 +173,7 @@ body {
 }
 
 .comic-text-dj-away{
-position: relative;
+  position: relative;
   color: #fff;
   font-size: 32px;
   font-weight: bold;
@@ -388,3 +388,397 @@ position: relative;
   50% { opacity: 1; filter: brightness(1.2) drop-shadow(0 0 5px #00ff04); }
 }
 
+.frame1{
+  width: 700px; 
+  height: 550px;
+}
+
+.frame15{
+  width: 350px; 
+  height: 450px; 
+  margin-right: 10px; 
+  margin-top: 10px;
+}
+
+.frame14{
+  width: 340px; 
+  height: 450px; 
+  margin-top: 10px;
+}
+
+.frameNoDiskoBall{
+width: 700px; 
+height: 700px;
+}
+
+.frame3{
+  width: 700px; 
+  height: 300px;
+}
+
+.page3{
+  display: flex; 
+  margin-top: 10px;
+}
+
+.frame8{
+  width: 400px; 
+  height: 350px;
+}
+
+.part3{
+  display: grid; 
+  margin-left: 10px;
+}
+
+.frame18{
+  width: 290px; 
+  height: 170px;
+}
+
+.frame17{
+width: 290px; 
+height: 170px;
+}
+
+.frame4{
+  width: 700px; 
+  height: 300px; 
+  margin-top: 10px;
+}
+
+.FrameNoLight{
+  width: 700px; 
+  height: 700px;
+}
+
+.page5{
+  display: flex;
+}
+
+.frame10{
+  width: 540px; 
+  height: 550px; 
+  margin-right: 10px;
+}
+
+.frame16{
+  width: 150px; 
+  height: 550px;
+}
+
+.btnpage5{
+  margin-right: 40px;
+}
+
+.frame11{
+  width: 700px; 
+  height: 350px;
+  margin-top: 140px;
+}
+
+.frame19{
+  width: 700px; 
+  height: 250px; 
+  margin-bottom: 10px;
+}
+
+.frame9{
+  width: 700px; 
+  height: 640px;
+}
+
+.frame13{
+  width: 700px; 
+  height: 550px;
+}
+
+.frame20{
+  width: 350px; 
+  height: 450px; 
+  margin-right: 10px; 
+  margin-top: 10px;
+}
+
+.frame21{
+  width: 340px; 
+  height: 450px; 
+  margin-top: 10px;
+}
+
+/* адаптив телефона: 420px */
+@media (max-width: 420px) {
+
+@font-face {
+  font-family: 'TrenchThin';          
+  src: url('fonts/TrenchThin-aZ1J.ttf') format('truetype'); 
+}
+
+  .main-frame {
+  width: 400px;
+  padding: 10px;
+}
+
+.soundbutton{
+  position: absolute;
+  top: 30px;
+  margin-left: 220px;
+  padding: 10px 10px;
+}
+
+ /*page 1*/
+ .moon {
+  margin-top: 10px;
+  margin-left: 250px;
+  width: 100px;
+  height: 100px;  
+}
+.frame1{
+  width: 380px; 
+  height: 390px;
+}
+
+.frame15{
+  width: 160px; 
+  height: 250px; 
+  margin-right: 10px; 
+  margin-top: 10px;
+}
+.frame14{
+  width: 210px; 
+  height: 250px; 
+  margin-top: 10px;
+}
+
+.comic-text-start{
+  font-size: 24px;
+  padding: 10px 10px;            
+  margin-left: 90px;
+}
+
+.comic-text-start.active {
+  transform: translateY(-80px); /* где заканчивает всплывать текст (ось и координата)*/
+}
+
+/*page 2*/
+.disco-ball {
+  position: absolute;
+  margin-top: 220px;
+  margin-left: 200px;
+  width: 30px;
+  height: 50px;
+  animation: discoBlink 0.8s infinite;
+  background: none;
+}
+
+.frameNoDiskoBall{
+width: 380px; 
+height: 380px;
+}
+
+.comic-text {
+  font-size: 24px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+/*page 3*/
+.frame3{
+  width: 380px; 
+  height: 200px;
+}
+
+.frame8{
+  width: 250px; 
+  height: 300px;
+}
+
+.frame18{
+  width: 120px; 
+  height: 130px;
+}
+
+.frame17{
+width: 120px; 
+height: 160px;
+}
+
+.frame4{
+  width: 380px; 
+  height: 200px; 
+  margin-top: 10px;
+}
+
+/*page 4*/
+.light1 {
+  height: 380px;
+  margin-left: -9px;
+}
+
+.light2 {
+  height: 392px;
+}
+
+.light3 {
+  height: 390px;
+  margin-left: 210px;
+}
+
+.FrameNoLight{
+  width: 380px; 
+  height: 380px;
+}
+
+.comic-text-dance{
+  font-size: 24px;
+  padding: 10px 10px;
+  transform: translateX(30px);
+  margin-left: 220px;
+  margin-top: 30px;
+}
+
+/*page 5*/
+.frame10{
+  width: 280px; 
+  height: 400px; 
+  
+}
+
+.frame16{
+  width: 90px; 
+  height: 400px;
+}
+
+.comic-text-dj {
+  font-size: 24px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  width: 140px;
+}
+
+.btnpage5{
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+/*page 6*/
+.frame11{
+  width: 380px; 
+  height: 250px;
+  margin-top: 10px;
+}
+
+.light1-dj{
+  top: 20px;
+  left: 60px;
+  width: 95px;
+  height: 75px;
+}
+
+.light2-dj{
+  top: 20px;
+  right: 60px;
+  width: 95px;
+  height: 75px;
+}
+.btn-prev {
+  bottom: 120px;
+  left: 175px;
+  width: 35px;
+  height: 25px;
+}
+
+.btn-next {
+  bottom: 75px;
+  left: 175px;
+  width: 35px;
+  height: 25px;
+}
+
+.btn-circle{
+  bottom: 85px;
+  right: 35px;
+  width: 110px;
+  height: 110px;
+}
+
+.btn-circle2{
+  bottom: 85px;
+  left: 35px;
+  width: 110px;
+  height: 110px;
+}
+
+.comic-text-dj-away{
+  font-size: 24px;
+  padding: 10px 10px;
+  margin-top: -10px;
+  width: 140px;
+  margin-bottom: 20px; 
+}
+
+/*page 7*/
+
+.frame19{
+  width: 380px; 
+  height: 200px; 
+  margin-bottom: 10px;
+}
+
+.light4 {
+  height: 140px;
+  margin-top: 210px;
+  margin-left: 45px;
+}
+
+.light5 {
+  height: 140px;
+  margin-top: 210px;
+  margin-left: 185px;
+}
+
+.light6 {
+  height: 199px;
+  margin-top: 355px;
+  margin-left: 228px;
+}
+
+.frame9{
+  width: 380px; 
+  height: 340px;
+}
+
+.comic-text-noman{
+  font-size: 24px;
+  padding: 10px 10px;
+  margin-bottom: 5px;              
+  margin-left: 140px;
+  transform: translateY(500px); /* откуда всплывает текст (ось и координата)*/
+}
+
+.comic-text-noman.active {
+  opacity: 1;
+  transform: translateY(480px); /* где заканчивает всплывать текст (ось и координата)*/
+}
+
+/*page 8*/
+
+.frame13{
+  width: 380px; 
+  height: 300px;
+}
+
+.frame20{
+  width: 160px; 
+  height: 250px; 
+  margin-right: 10px; 
+  margin-top: 10px;
+}
+
+.frame21{
+  width: 210px; 
+  height: 250px; 
+  margin-top: 10px;
+}
+}
