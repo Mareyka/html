@@ -17,8 +17,8 @@ let userMuted = true;
 
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const track = audioContext.createMediaElementSource(music);
-const filter = audioContext.createBiquadFilter();
-filter.type = 'lowpass';
+const filter = audioContext.createBiquadFilter(); // создаю фильтр
+filter.type = 'lowpass'; // Тип фильтра - пропускает только низкие частоты
 filter.frequency.value = 150; //чем ниже -> тем сильнее эффект дымки
 track.connect(filter).connect(audioContext.destination);
 
