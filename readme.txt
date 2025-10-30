@@ -32,8 +32,8 @@ Custom properties (переменные) для единого стиля
 Blend modes (mix-blend-mode) для световых эффектов
 Filter effects (drop-shadow, hue-rotate, brightness)
 Keyframe анимации с множественными состояниями
-JavaScript - отслеживание скролла, управление звуком, интерактивность, динамические изменения.
-3. JS:
+3. JavaScript - отслеживание скролла, управление звуком, интерактивность, динамические изменения.
+JS:
 IntersectionObserver API для отслеживания скролла
 Web Audio API для управления звуком
 Event Listeners для интерактивности
