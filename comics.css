@@ -19,7 +19,6 @@ body {
   align-items: center;
 }
 
-/*лавный контейнер со всем контентом */
 .main-frame {
   border: 3px solid #ff00ff;
   border-radius: 20px;

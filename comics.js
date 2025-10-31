@@ -110,8 +110,7 @@ const tracks = [
   'music/acid up1.mp3',
   'music/Zombie Zombie - Rocket Number 9 (Gesaffelstein Remix).mp3',
   'music/Dj Vini - Run.mp3',
-  'music/Ivan Dorn - Groovy Shit.mp3',
-  'music/Акула - Кислотный DJ.mp3'
+  'music/Ivan Dorn - Groovy Shit.mp3'
 ];
 
 let current = 0;
